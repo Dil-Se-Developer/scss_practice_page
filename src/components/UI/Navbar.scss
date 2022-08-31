@@ -1,57 +1,55 @@
-@import '../var';
-@import '../mixin';
+@import "../var";
+@import "../mixin";
 
 .page_container {
-    .nav_ham_section {
-        padding: 2rem 1.5rem;
+  .nav_ham_section {
+    padding: 2rem 1.5rem;
 
-        svg {
-            cursor: pointer;
-        }
+    svg {
+      cursor: pointer;
+    }
+  }
+  .nav_section {
+    display: none;
+  }
+
+  // Responsive Style
+
+  @media only screen and (min-width: 1200px) {
+    .nav_ham_section {
+      display: none;
     }
     .nav_section {
-        display: none;
-    }
-}
-
-// Responsive Style
-
-@media only screen and (min-width: 1200px) {
-    .page_container {
-        .nav_ham_section {
-            display: none;
+      display: block;
+      padding: 2rem 0rem;
+      @include flexprop(flex, row);
+      justify-content: space-between;
+      align-items: center;
+      .nav_start {
+        @include flexprop(flex, row);
+        cursor: pointer;
+        img {
+          width: 100px;
+          height: 21px;
         }
-        .nav_section {
-            display: block;
-            padding: 2rem 0rem;
-            @include flexprop(flex, row);
-            justify-content: space-between;
-            align-items: center;
-            .nav_start {
-                @include flexprop(flex, row);
-                cursor: pointer;
-                img {
-                    width: 100px;
-                    height: 21px;
-                }
-                span {
-                    @include fontprop(2rem, 300, $other-font-2);
-                    margin-left: 1rem;
-                }
-            }
-            .nav_end {
-                @include flexprop(flex, row);
-                cursor: pointer;
-                list-style: none;
-                li {
-                    @include fontprop(1.4rem, 500, $other-font-2);
-                    margin-right: 2rem;
-                    text-transform: uppercase;
-                }
-                & :nth-child(5) {
-                    margin-right: 0rem;
-                }
-            }
+        span {
+          @include fontprop(2rem, 300, $other-font-2);
+          margin-left: 1rem;
         }
+      }
+      .nav_end {
+        @include flexprop(flex, row);
+        cursor: pointer;
+        list-style: none;
+        li {
+          @include fontprop(1.4rem, 500, $other-font-2);
+          margin-right: 2rem;
+          text-transform: uppercase;
+        }
+        & :nth-child(5) {
+          margin-right: 0rem;
+        }
+      }
     }
+  }
 }

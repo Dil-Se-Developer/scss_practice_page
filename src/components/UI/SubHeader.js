@@ -5,7 +5,16 @@ import "./SubHeder.scss";
 const SubHeader = () => {
   return (
     <div className="subheader_section">
-      <img className="subheader_logo" src={header_img} alt="background img"/>
+      <img src={header_img} alt="background img"/>
+      <div className="subheader_txt">
+        <div className="subheader_heading">
+          <h2>535 million</h2>
+          <p>Orders delivered*</p>
+        </div>
+        <div className="subheader_year">
+          *FY 2022
+        </div>
+      </div>
     </div>
   );
 };

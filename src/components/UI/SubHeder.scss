@@ -1,0 +1,63 @@
+@import "../var";
+@import "../mixin";
+
+.subheader_section {
+  position: relative;
+  width: 100%;
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 54rem;
+  }
+  .subheader_txt {
+    @include flexprop(flex, row);
+    align-items: flex-end;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    bottom: 6rem;
+    padding: 0 3rem;
+
+    .subheader_heading {
+      h2 {
+        @include fontprop(3rem, 500, $white-font);
+      }
+      p {
+        @include fontprop(1.6rem, 400, $white-font);
+        margin-top: 1rem;
+      }
+    }
+    .subheader_year {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(4px);
+      padding: 1rem 1.8rem;
+      border-radius: 10px;
+      @include fontprop(1rem, 300, $white-font);
+    }
+  }
+
+  //   Responsive Styles
+  @media only screen and (min-width: 1200px) {
+    .subheader_txt {
+      width: 1200px;
+      left: 50%;
+      top: 85%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+    }
+  }
+}
+
+// Responsive Style
+
+// @media only screen and (min-width: 1200px) {
+//   .subheader_section {
+//     .subheader_txt {
+//       width: 1200px;
+//       left: 50%;
+//       top: 85%;
+//       transform: translate(-50%, -50%);
+//       padding: 0;
+//     }
+//   }
+// }
