@@ -1,0 +1,62 @@
+@import "../var";
+@import "../mixin";
+
+.page_container {
+    &.company_announce_container {
+        padding: 0 3rem;
+        margin-bottom: 7rem;
+
+        h4 {
+            @include fontprop(2rem, 500, $black-font);
+            margin-bottom: 0.5rem;
+        }
+
+        .company_announce_btn_section {
+            @include flexprop(flex, column);
+            margin: 0.5rem 0 2rem;
+
+            button {
+                @include flexprop(flex, row);
+                align-items: center;
+                margin-top: 1rem;
+                @include btnprop(#F8F8F8, 0.6rem, 1rem 1.6rem);
+                @include fontprop(1.3rem, 500, $other-font-2);
+
+                svg {
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        // Responsive Style
+        @media only screen and (min-width: 576px) {
+            & .company_announce_btn_section {
+                @include flexprop(flex, row);
+                flex-wrap: wrap;
+                column-gap: 1rem;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            & {
+                h4 {
+                    font-size: 3.3rem;
+                    margin-bottom: 3.6rem;
+                }
+
+                .company_announce_btn_section {
+                    margin: 1rem 0 3rem;
+                    button {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            & {
+                padding: 0;
+            }
+        }
+    }
+}

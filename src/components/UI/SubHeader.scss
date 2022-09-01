@@ -4,11 +4,13 @@
 .subheader_section {
   position: relative;
   width: 100%;
+
   img {
     width: 100%;
     object-fit: cover;
     height: 54rem;
   }
+
   .subheader_txt {
     @include flexprop(flex, row);
     align-items: flex-end;
@@ -22,11 +24,13 @@
       h2 {
         @include fontprop(3rem, 500, $white-font);
       }
+
       p {
         @include fontprop(1.6rem, 400, $white-font);
         margin-top: 1rem;
       }
     }
+
     .subheader_year {
       background: rgba(0, 0, 0, 0.3);
       backdrop-filter: blur(4px);
@@ -37,6 +41,28 @@
   }
 
   //   Responsive Styles
+  @media only screen and (min-width: 768px) {
+    img {
+      height: 61rem;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .subheader_txt {
+      .subheader_heading {
+        h2 {
+          font-size: 6.5rem;
+        }
+        p {
+          font-size: 3rem;
+        }
+      }
+      .subheader_year {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
   @media only screen and (min-width: 1200px) {
     .subheader_txt {
       width: 1200px;

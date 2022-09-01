@@ -10,3 +10,12 @@
     font-weight: $weight;
     color: $color;
 }
+
+@mixin btnprop($backclr, $border_radius, $btn_padding) {
+    width: fit-content;
+    padding: $btn_padding;
+    cursor: pointer;
+    background: $backclr;
+    border-radius: $border_radius;
+    border: none;
+}

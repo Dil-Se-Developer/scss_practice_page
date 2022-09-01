@@ -1,6 +1,6 @@
 import React from "react";
 import header_img from "../../assets/header_img.avif";
-import "./SubHeder.scss";
+import "./SubHeader.scss";
 
 const SubHeader = () => {
   return (

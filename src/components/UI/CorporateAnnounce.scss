@@ -1,0 +1,80 @@
+@import "../var";
+@import "../mixin";
+
+.page_container {
+    &.corporate_announce_conatainer {
+        padding: 0 3rem;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+
+        h4 {
+            @include fontprop(2rem, 500, $other-font-2);
+        }
+
+        .corporate_announce_txt {
+            hr {
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid rgb(232, 232, 232);
+                margin: 2.5rem 0;
+            }
+
+            p {
+                @include fontprop(1.6rem, 300, $other-font-5);
+            }
+
+            h6 {
+                @include fontprop(2rem, 300, $other-font-2);
+                margin: 1.5rem 0;
+                line-height: 3rem;
+            }
+
+            button {
+                border: none;
+                @include flexprop(flex, row);
+                @include fontprop(1.6rem, 300, $other-font-4);
+                align-items: center;
+                background-color: transparent;
+                cursor: pointer;
+
+                svg {
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+        .corporate_announce_btn {
+            @include btnprop($other-font-4, 0.6rem, 1.2rem 1.6rem);
+            @include fontprop(1.6rem, 300, $white-font);
+            margin-top: 3rem;
+            cursor: pointer;
+        }
+
+        // Responsive Style 
+
+        @media only screen and (min-width: 768px) {
+            & {
+                margin-bottom: 4rem;
+                h4 {
+                    font-size: 3.3rem;
+                }
+
+                .corporate_announce_txt {
+                    hr {
+                        margin: 3.5rem 0;
+                    }
+
+                    h6 {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            & {
+                padding: 0;
+            }
+        }
+    }
+}
