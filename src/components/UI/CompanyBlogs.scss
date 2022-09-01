@@ -2,69 +2,75 @@
 @import "../mixin";
 
 .company_blogs_bg {
-    background: #F8F8F8;
+  background: #f8f8f8;
 
-    .company_blogs_container {
-        padding: 3rem 3rem;
+  .company_blogs_container {
+    padding: 3rem 3rem;
 
-        h4 {
-            @include fontprop(3rem, 500, $other-font-2);
-        }
-
-        .company_blogs_cards {
-            @include flexprop(flex, column);
-
-            .company_blog_card {
-                margin-top: 2rem;
-                margin-bottom: 2rem;
-                .company_blog_img {
-                    position: relative;
-                    margin-bottom: 2rem;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        border-radius: 5px;
-                    }
-    
-                    span {
-                        @include fontprop(1.6rem, 300, $white-font);
-                        position: absolute;
-                        bottom: 1rem;
-                        right: 1rem;
-                        background: rgb(28, 28, 28);
-                        opacity: 0.75;
-                        padding: 6px 10px;
-                        border-radius: 4px;
-                    }
-                }
-                span {
-                    @include fontprop(1.3rem, 300, $other-font-6);
-                }
-                h6 {
-                    @include fontprop(2rem, 400, $other-font-2);
-                    margin-top: 1rem;
-                    margin-bottom: 2rem;
-                }
-                p {
-                    @include fontprop(1.6rem, 300, $black-font);
-                    margin-bottom: 1rem;
-                }
-            }      
-        }
-
-        button {
-            @include btnprop($other-font-4, 0.6rem, 1.2rem 1.6rem);
-            @include fontprop(1.6rem, 300, $white-font);
-            cursor: pointer;
-        }
-
-        // Responsive Style
-        @media only screen and (min-width: 1200px) {
-            & {
-                padding: 3rem 0;
-            }
-        }
+    h4 {
+      @include fontprop(3rem, 500, $other-font-2);
     }
 
+    .company_blogs_cards {
+      @include flexprop(flex, column);
+
+      .company_blog_card {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        .company_blog_img {
+          position: relative;
+          margin-bottom: 2rem;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+          }
+
+          span {
+            @include fontprop(1.6rem, 300, $white-font);
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background: rgb(28, 28, 28);
+            opacity: 0.75;
+            padding: 6px 10px;
+            border-radius: 4px;
+          }
+        }
+        span {
+          @include fontprop(1.3rem, 300, $other-font-6);
+        }
+        h6 {
+          @include fontprop(2rem, 400, $other-font-2);
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+        }
+        p {
+          @include fontprop(1.6rem, 300, $black-font);
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    button {
+      @include btnprop($other-font-4, 0.6rem, 1.2rem 1.6rem);
+      @include fontprop(1.6rem, 300, $white-font);
+      cursor: pointer;
+    }
+
+    // Responsive Style
+    @media only screen and (min-width: 768px) {
+      .company_blogs_cards {
+        @include flexprop(flex, row);
+        column-gap: 2rem;
+      }
+    }
+
+    @media only screen and (min-width: 1200px) {
+      & {
+        padding: 3rem 0;
+      }
+    }
+  }
 }

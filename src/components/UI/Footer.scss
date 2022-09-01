@@ -1,0 +1,180 @@
+@import "../var";
+@import "../mixin";
+
+.page_container {
+  &.footer_section {
+    padding: 0 3rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+
+    .footer_top_section {
+      @include flexprop(flex, column);
+      margin-bottom: 3rem;
+
+      .footer_top_logo {
+        img {
+          width: 132px;
+          height: 28px;
+        }
+      }
+
+      .footer_top_dropdown {
+        @include flexprop(flex, row);
+        margin-top: 4rem;
+
+        .footer_top_country,
+        .footer_top_langauge {
+          @include flexprop(flex, row);
+          align-items: center;
+          padding: 0.3rem 0.7rem;
+          border: 1px solid rgb(181, 181, 181);
+          border-radius: 0.6rem;
+          cursor: pointer;
+        }
+        .footer_top_country {
+          span {
+            width: 45px;
+            height: 30px;
+            display: inline-block;
+            background: url(https://b.zmtcdn.com/data/webuikit/0687ff554c86e36cda9498212e221af61563274375.png) -141px
+              0px no-repeat;
+            transform: scale(0.488889);
+            margin-left: -12px;
+          }
+          p {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--other-font-2);
+          }
+          svg {
+            margin-left: 0.5rem;
+          }
+        }
+        .footer_top_langauge {
+          margin-left: 2rem;
+          p {
+            @include fontprop(1.6rem, 400, $other-font-2);
+            margin: 0 0.5rem;
+          }
+        }
+      }
+    }
+
+    .footer_mid_section {
+      @include flexprop(flex, row);
+      flex-wrap: wrap;
+      row-gap: 30px;
+      column-gap: 15px;
+      margin-top: 4rem;
+      .footer_mid_card {
+        @include flexprop(flex, column);
+        flex: 42%;
+        h4 {
+          @include fontprop(1.4rem, 500, $black-font);
+          letter-spacing: 0.4rem;
+          margin-bottom: 1.2rem;
+          &:nth-child(even) {
+            margin: 2rem 0 1.2rem 0;
+          }
+        }
+        p {
+          cursor: pointer;
+          margin: 0.5rem 0;
+          @include fontprop(1.4rem, 300, $other-font-3);
+        }
+      }
+
+      .footer_mid_social_card {
+        h4 {
+          letter-spacing: 0.4rem;
+          margin-bottom: 1.2rem;
+          @include fontprop(1.4rem, 500, $black-font);
+          text-transform: uppercase;
+        }
+        .footer_mid_social_icons {
+          margin: 1rem 0 1.8rem 0;
+          a {
+            margin-left: 1rem;
+            cursor: pointer;
+            &:nth-child(1) {
+              margin: 0;
+            }
+          }
+        }
+        .footer_mid_app {
+          img {
+            width: 137px;
+            height: 40px;
+            cursor: pointer;
+            &:nth-child(2) {
+              margin-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .footer_hr {
+      margin-top: 4.4rem;
+      border: 0.5px solid rgb(207, 207, 207);
+    }
+
+    .footer_bottom_section {
+      p {
+        @include fontprop(1.3rem, 300, $other-font-5);
+        margin-top: 2.2rem;
+      }
+    }
+
+    // Responsive Style
+
+    @media only screen and (min-width: 576px) {
+      & {
+        .footer_top_section {
+          @include flexprop(flex, row);
+          justify-content: space-between;
+          align-items: center;
+          .footer_top_dropdown {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      & {
+        .footer_mid_section {
+          .footer_mid_card,
+          .footer_mid_social_card {
+            flex: 17%;
+            &:nth-child(3) {
+                flex: 19.5%;
+            }
+          }
+          .footer_mid_social_card {
+            .footer_mid_social_icons {
+              a {
+                margin-left: 0.6rem;
+                cursor: pointer;
+              }
+            }
+            .footer_mid_app {
+              img {
+                &:nth-child(2) {
+                  margin-left: 0rem;
+                  margin-top: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media only screen and (min-width: 1200px) {
+      & {
+        padding: 0;
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ import CompanyAnnounce from "../UI/CompanyAnnounce";
 import CompanyDetails from "../UI/CompanyDetails";
 import CorporateAnnounce from "../UI/CorporateAnnounce";
 import CompanyBlogs from "../UI/CompanyBlogs";
+import Footer from "../UI/Footer";
 import "./Home.scss";
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <CompanyDetails />
       <CorporateAnnounce />
       <CompanyBlogs />
+      <Footer/>
     </>
   );
 };
